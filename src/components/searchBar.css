@@ -1,0 +1,22 @@
+.search{
+    justify-content: center;
+}
+
+.search-input{
+    font-size: 25px;
+    padding: 5px 50px 5px 10px;
+    border-radius: 0px 10px 10px 0px;
+    background: #ccc;
+    color: black;
+}
+.search-input:focus{
+    background: #ccc;
+}
+.lupa{
+    font-size: 45px !important;
+    border-radius: 0px 10px 10px 0px;
+    background: transparent;
+    margin-bottom: 6px;
+    margin-left: -55px;
+    cursor: pointer;
+}

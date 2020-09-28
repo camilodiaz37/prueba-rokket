@@ -1,26 +1,90 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import requests from "./components/request";
+import axios from "axios";
+import { connect } from 'react-redux';
+import { Route, useHistory } from 'react-router-dom';
+import { guardar } from './reducers/tagBusqueda';
+import { setear } from './reducers/pagina';
+import "./App.css";
+import Header from "./components/header";
+import Banner from "./components/banner";
+import Card from "./components/card";
+import Loading from "./components/loading";
+import Pagination from "./components/Pagination";
+import NoResults from "./components/noResults";
 
-function App() {
+
+
+function App(props) {
+  const { guardar, setear } = props;
+  const { tagBusqueda, pagina } = props.state;
+  const [lista, setLista] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const history = useHistory();
+
+  useEffect(() => {
+    if (tagBusqueda?.length > 0) {
+      const url = `${requests.Obtener_tag}${tagBusqueda}/post?page=${pagina}&limit=50`;
+      async function fetchData() {
+        setIsLoading(true);
+        const request = await axios.get(url, { headers: { 'app-id': requests.APP_ID } });
+        setData(request);
+        setIsLoading(false);
+        history.push(`/tag/${tagBusqueda}/page/${pagina + 1}`);
+      }
+      fetchData();
+    }
+  }, [pagina, tagBusqueda, history])
+
+  //Guardar listado de respuesta a la peticion en lista
+  const setData = (request) => {
+    setLista(request)
+  }
+  //Guardar elemento ingresado en input para la busqueda
+  const buscar = (event) => {
+    event.preventDefault();
+    setear(0);
+    guardar(document.getElementById("input").value);
+  }
+  //Cambiar numero de pagina entre resultados
+  const paginacion = (number, e) => {
+    e.preventDefault();
+    setear(number);
+    console.log(props.state);
+    history.push(`/tag/${tagBusqueda}/page/${pagina + 1}`);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Route path="/">
+        <Header toHome={() => { history.push("/"); guardar('') }} tagBusqueda={tagBusqueda} buscar={buscar} />
+      </Route>
+      <Route exact path="/">
+        <Banner />
+      </Route>
+      {isLoading ? (<Loading />) :
+        tagBusqueda ?
+          lista.data?.data.length === 0 ?
+            <NoResults path={`/tag/${tagBusqueda}/page/${pagina + 1}`} />
+            :
+            <Route path={`/tag/${tagBusqueda}/page/${pagina + 1}`}>
+              <div className="main-container">{lista.data?.data.map((card, index) => <Card key={index} card={card} />)}</div>
+              <Pagination paginacion={paginacion} totalPosts={lista.data?.total} />
+            </Route>
+          : true
+      }
+    </div >
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    state,
+  }
+}
+const mapDispatchToProps = (dispatch) => ({
+  //reducer numero
+  setear: (payload) => dispatch(setear(payload)),
+  //reducer tagBusqueda
+  guardar: (payload) => dispatch(guardar(payload)),
+})
+export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -1,0 +1,90 @@
+.card{
+    border: 1px solid gray;
+    box-shadow: inset 1px 1px 10px #ccc;
+    height: -moz-fit-content;
+    border-radius: 10px;
+    break-inside: avoid;
+    padding: 10px;
+    margin: 0px 0px 20px;
+}
+.contenido{
+    margin: 5px;
+    width: -webkit-fill-available;
+}
+.name{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.email{
+    margin-top: 0px;
+    text-align: center;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.image{
+    width: 100%;
+}
+.tags{
+    width: 100%;
+    height: 45px;
+    display: inline-flex;
+    justify-content: center;
+}
+.tag{
+    width: fit-content;
+    padding: 0px 10px 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    font-size: 15px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    background: #ED2C6C;
+    color: #FFFFFF;
+    align-self: baseline;
+}
+.description{
+    margin-top:0px;
+    margin-bottom: 5px;
+    height: fit-content;
+}
+.description::first-letter{
+    text-transform: uppercase;
+}
+.link{
+    text-decoration: none;
+    color: #AE4BBB;
+    font-size: 14px;
+    border-bottom: 1px solid #ccc;
+    display: block;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.link:hover{
+    text-decoration: underline;
+    color: #0000EE;
+}
+.likes{
+    display: inline-flex;
+    width: 100%;
+    height: max-content;
+    border-bottom: 1px solid #ccc;
+    justify-content: center;
+    align-items: center;
+}
+.likes-h3{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-right: 35px;
+}
+.corazon{
+    color: #ED2C6C !important;
+    margin-right: 10px;
+}
+.fecha{
+    margin-left: -10px;
+}

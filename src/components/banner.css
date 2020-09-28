@@ -1,0 +1,18 @@
+.banner{
+    width: 100%;
+    height: calc(100vh - 80px);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    padding: 20px;
+    border: 1px solid gray;
+    width: 250px;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 3px #ccc;
+    position: absolute;
+    bottom: 50px;
+    left: 2%;
+}

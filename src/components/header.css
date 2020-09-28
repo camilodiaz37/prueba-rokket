@@ -1,0 +1,52 @@
+@font-face{
+    font-family: "vintage";
+    src: url('./fonts/CFBrothersinArmsPERSONAL-Re.ttf');
+}
+
+
+.header{
+    width: 100%;
+    height: 80px;
+    border: 1px solid black;
+    /*background: #ECE6D8;*/
+    background: #1E1E1E;
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.nav-titulo{
+    flex-basis: 40%;
+    margin-left: 50px;
+    font-size: 40px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    cursor: pointer;
+    color: #ccc;
+    font-family: 'vintage';
+    letter-spacing: 15px;
+    font-size: 50px;
+}
+
+
+@media (max-width: 870px){
+    .header{
+        height: auto;
+    }
+    .nav-titulo{
+        margin-right: 0px;
+        margin-left: 0px;
+        width: 50%;        
+    }
+    .SearchBar{
+        margin-right: 0px;
+        margin-left: 0px;
+        width: 70%;
+        padding-bottom: 10px;
+    }
+}
