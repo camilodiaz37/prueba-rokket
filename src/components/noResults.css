@@ -1,0 +1,19 @@
+.noFound-container{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 550px;
+    display: flex;
+}
+
+
+.noFound{
+    margin: auto;
+    text-align: center;
+}
+
+@media (max-width: 500px){
+    .noFound{
+        font-size: 25px;
+    }
+}

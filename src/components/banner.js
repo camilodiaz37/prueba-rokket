@@ -22,6 +22,10 @@ function Banner() {
                 backgroundImage: `url("${card.image}")`,
                 backgroundPosition: "center center",
             }}>
+            <div className="title">
+                <h1>Descubre las mejores imagenes</h1>
+                <h3> y encuentra donde aparece en linea.</h3>
+            </div>
             <AutorBanner datos={card.owner} />
         </section>
     )

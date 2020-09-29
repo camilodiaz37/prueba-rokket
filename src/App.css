@@ -5,7 +5,7 @@
 .main-container{
   width: 80%;
   margin-right: auto;
-  columns: 3;
+  columns: 3; /*3*/
   margin-left: auto;
   column-gap: 40px;
   padding-top: 30px;

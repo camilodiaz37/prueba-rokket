@@ -1,0 +1,48 @@
+.post-container{
+    width: 100%;
+    height: calc(100vh - 122px);
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.post-image{
+    width: 60%;
+    overflow: hidden;
+    margin-left: 30px;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.post-content{
+    width: 30%;
+    margin-top: 20px;
+    margin-right: 30px;
+    margin-left: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: fit-content;
+    box-shadow: 0px 0px 3px #10B,0px 0px 2px #10B;
+}
+.post-content > .tags{
+    border-bottom: 1px solid #ccc;
+}
+.post-content > .description{
+    padding-left: 5px;
+}
+.post-content > .fecha{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.post-container > a{
+    width: 100%;
+}
+
+.backToList{
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+}
