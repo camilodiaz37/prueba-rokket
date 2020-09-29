@@ -1,4 +1,4 @@
-# Título del Proyecto
+# Rokket app
 
 _Este proyecto consiste en una pagina web que consulta una api para obtener informacion acerca de diferentes topicos_
 _Por ejemplo al ingresar la palabra "dog" buscara todos los post relacionados con perros_
