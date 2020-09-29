@@ -47,7 +47,7 @@ function App(props) {
     event.preventDefault();
     setear(0);
     guardarPost(null);
-    guardar(document.getElementById("input").value);
+    guardar((document.getElementById("input").value).toLowerCase());
   }
   //Cambiar numero de pagina entre resultados
   const paginacion = (number, e) => {
