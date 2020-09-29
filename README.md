@@ -6,6 +6,13 @@ _Por ejemplo al ingresar la palabra "dog" buscara todos los post relacionados co
 _Como consideración se debe tener que se puede hacer un total de 500 peticiones a la API por dia por lo que las busquedas estan limitadas_
 _Y además las busquedas deben ser realizadas en ingles para tener mayor coincidencia con los datos de la API_
 
+## Link del proyecto
+
+_Puedes revisar el proyecto deployado en el siguiente enlace_
+
+* [https://rokket-app-d7e0e.web.app/](https://rokket-app-d7e0e.web.app/)
+
+
 ## Comenzando
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
