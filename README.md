@@ -1,6 +1,10 @@
 # Título del Proyecto
 
-_Acá va un párrafo que describa lo que es el proyecto_
+_Este proyecto consiste en una pagina web que consulta una api para obtener informacion acerca de diferentes topicos_
+_Por ejemplo al ingresar la palabra "dog" buscara todos los post relacionados con perros_
+
+_Como consideración se debe tener que se puede hacer un total de 500 peticiones a la API por dia por lo que las busquedas estan limitadas_
+_Y además las busquedas deben ser realizadas en ingles para tener mayor coincidencia con los datos de la API_
 
 ## Comenzando
 
@@ -35,7 +39,7 @@ _Luego ejercutar npm install para instalar las dependencias del proyecto_
 ```
 C://users/usuario/desktop/rokket-app> npm install
 ```
-_Finalmente ejecuta el comando npm start para ejecutarlo de manera local
+_Finalmente ejecuta el comando npm start para ejecutarlo de manera local_
 ```
 C://users/usuario/desktop/rokket-app> npm start
 ```
@@ -48,8 +52,8 @@ _Menciona las herramientas que utilizaste para crear tu proyecto_
 
 * [Reactjs](https://es.reactjs.org/) - El framework web usado fue Reactjs.
 * [npm](https://nodejs.org/es/) - Manejador de dependencias.
-* [Hooks] - useState y useEffect.
-* [Redux] - Para manejar el estado de la aplicacion (paginacion, datos de la api y post).
-* [react-router-dom] - para manejar la url.
-* [bootstrap] - Para crear el componente de paginación.
-* [material-ui] - Para obtener iconos de la información de los post.
+* [Hooks](https://es.reactjs.org/docs/hooks-intro.html) - useState y useEffect.
+* [Redux](https://es.redux.js.org/) - Para manejar el estado de la aplicacion (paginacion, datos de la api y post).
+* [react-router-dom](https://redux.js.org/advanced/usage-with-react-router) - para manejar la url.
+* [bootstrap](https://getbootstrap.com/) - Para crear el componente de paginación.
+* [material-ui](https://material-ui.com/) - Para obtener iconos de la información de los post.
