@@ -25,7 +25,7 @@ Mira **Deployment** para conocer como desplegar el proyecto.
 _Que cosas necesitas para instalar el software y como instalarlas_
 
 ```
-Instalar Node js/NPM    Se puede descargar desde --->  https://nodejs.org/es/
+Instalar Node js/npm    Se puede descargar desde --->  https://nodejs.org/es/
 Descargar el Proyecto desde este repositorio
 ```
 
